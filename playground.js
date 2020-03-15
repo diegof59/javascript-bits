@@ -167,3 +167,36 @@ function rangeOfNumbers(startNum, endNum) {
   }
 }
 console.log(`On rangeOfNumbers(5, 9): ${rangeOfNumbers(5,9)}`); // [5, 6, 7, 8, 9]
+
+// listaNumeros -> nuevaLista con los cuadrados de los enteros positivos de listaNumeros
+// Usa map y filter
+const squareList = (arr) => {
+  // Only change code below this line
+  let sqList = arr.filter(
+    (num) => (Number.isInteger(num) && num > 0)
+  ).map(
+    (num) => (Math.pow(num, 2))
+  )
+
+  return sqList;
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+
+
+// Slug maker
+let winterComing = "  Winter Is Coming";
+
+function urlSlug(title) {
+    return title.split(/\s/)
+                .filter(
+                    (str) => (/\S/.test(str)) // Devolvemos las substrings que no son espacios
+                )
+                .join("-")
+                .toLowerCase();
+}
+
+let winterComingSlug = urlSlug(winterComing); // Should be "winter-is-coming"
+console.log("\"Winter Is Coming\" slug: ", winterComingSlug)
