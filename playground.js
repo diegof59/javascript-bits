@@ -77,11 +77,11 @@ console.log(sum(5,4,3));
 
 // Array destructuring
 let [, x, y] = ARRAY;
-console.log(x);
+console.log("Array destructuring: x: ", x, " y:", y);
 
 // Obj destructuring with nested object
 let { "59" : {artist : p} } = music_collection;
-console.log(p);
+console.log("Obj destructuring with nested object: ", p);
 
 let num = 5;
 num;
@@ -89,7 +89,7 @@ console.log(num);
 
 // Destructuring with rest
 let [,,...arr] = ARRAY;
-console.log(arr);
+console.log("Destructuring with rest operator: ", arr);
 
 // Destructuring objet in function call
 let data = {
@@ -98,7 +98,7 @@ let data = {
   oth: 4,
 };
 let media = ({max, min}) => ((max + min)/2.0);
-console.log(media(data));
+console.log("Destructuring objet in function call: func(data): ", media(data));
 
 // Template literals
 let template = `Contenido multilinea
@@ -183,7 +183,7 @@ const squareList = (arr) => {
 };
 
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
-console.log(squaredIntegers);
+console.log("SquaredList: ", squaredIntegers);
 
 
 // Slug maker
